@@ -47,7 +47,6 @@ while [ $i -lt 300 ]; do
     echo -n "."
 done
 echo
-set -x
 
 info "Resource AFTER changes to Helm values deployment"
 

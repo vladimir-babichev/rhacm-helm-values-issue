@@ -4,6 +4,8 @@ kind: Channel
 metadata:
   name: channel
   namespace: rhacm-helm-values-issue-ch-helm
+  annotations:
+    apps.open-cluster-management.io/reconcile-rate: high
 spec:
   pathname: https://chartmuseum.github.io/charts
   type: HelmRepo

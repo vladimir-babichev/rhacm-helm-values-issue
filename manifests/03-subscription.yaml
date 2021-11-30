@@ -7,7 +7,6 @@ metadata:
   labels:
     acm-app: chartmuseum
   annotations:
-    apps.open-cluster-management.io/reconcile-rate: high
     apps.open-cluster-management.io/reconcile-option: replace
 spec:
   channel: rhacm-helm-values-issue-ch-helm/channel
