@@ -4,7 +4,7 @@ Changes to Subscription manifest that deploys Helm chart under `.spec.packageOve
 
 ## Detailed problem description
 
-When introducing changes to Subscription manifest that deploys Helm chart under `.spec.packageOverrides[0].packageOverrides[0].value` are not reflected on the actual cluster. The Subscription resource on Hub and Managed clusters reflect correct settings, but Helmrelease resource and as a result actual instantiation of the helm chart do not reflect changes.
+Changes to Subscription manifest that deploys Helm chart under `.spec.packageOverrides[0].packageOverrides[0].value` are not reflected on the actual cluster. The Subscription resource on Hub and Managed clusters reflect correct settings, but Helmrelease resource and as a result actual instantiation of the helm chart do not reflect changes.
 
 ## Prerequisits
 
