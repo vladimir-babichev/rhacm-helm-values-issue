@@ -1,0 +1,28 @@
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: chartmuseum
+  namespace: rhacm-helm-values-issue
+  labels:
+    acm-app: chartmuseum
+  annotations:
+    apps.open-cluster-management.io/reconcile-rate: high
+    apps.open-cluster-management.io/reconcile-option: replace
+spec:
+  channel: rhacm-helm-values-issue-ch-helm/channel
+  name: chartmuseum
+  packageFilter:
+    version: 3.3.0
+  placement:
+    placementRef:
+      name: local
+  packageOverrides:
+    - packageName: chartmuseum
+      packageAlias: chartmuseum
+      packageOverrides:
+        - path: spec
+          value:
+            replicaCount: 1
+            securityContext:
+              enabled: false

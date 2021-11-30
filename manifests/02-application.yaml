@@ -1,0 +1,13 @@
+---
+apiVersion: app.k8s.io/v1beta1
+kind: Application
+metadata:
+  name: chartmuseum
+  namespace: rhacm-helm-values-issue
+spec:
+  componentKinds:
+    - group: apps.open-cluster-management.io
+      kind: Subscription
+  selector:
+    matchLabels:
+      acm-app: chartmuseum

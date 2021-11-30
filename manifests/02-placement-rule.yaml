@@ -1,0 +1,10 @@
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: local
+  namespace: rhacm-helm-values-issue
+spec:
+  clusterSelector:
+    matchLabels:
+      local-cluster: "true"
